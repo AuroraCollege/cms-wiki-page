@@ -16,8 +16,8 @@ def index():
     contents = Content.query.all()
     return render_template('index.html', contents=contents)
 
-@app.route('/add', methods=['GET', 'POST'])
-def add():
+@app.route('/edit', methods=['GET', 'POST'])
+def edit():
     if request.method == 'POST':
         title = request.form['title']
         body = request.form['body']
